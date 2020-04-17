@@ -1,0 +1,11 @@
+To build docker images
+TODO
+docker build -t ikea-tc/todo:latest -f todo-docker .
+JMETER
+docker build -t ikea-tc/jmeter:latest -f jmeterbase-docker .
+
+To run test:
+LINUX:
+./load_test_run TODO_backend_test.jmx
+WINDOS:
+./apa.bat TODO_backend_test.jmx

@@ -1,0 +1,6 @@
+FROM java:8-jdk
+RUN mkdir /todo
+WORKDIR /todo
+COPY todo.jar /todo
+EXPOSE 6078
+ENTRYPOINT ["java", "-jar", "/todo/todo.jar"]
