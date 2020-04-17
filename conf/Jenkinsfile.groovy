@@ -12,9 +12,17 @@ pipeline {
                sh "./load_test_run.sh TODO_backend_test.jmx" 
             }
         }
-        stage('Deploy') {
+        stage('Publish report') {
             steps {
-                echo 'Deploying....'
+       // publish html
+            publishHTML target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: 'coverage',
+            reportFiles: 'report/index.html',
+            reportName: 'RCov Report'
+          ]
             }
         }
     }
