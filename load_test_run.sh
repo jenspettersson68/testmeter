@@ -19,7 +19,7 @@ docker cp $1 jb:jmeter/apache-jmeter-5.2.1/bin/$1
 sleep 15
 
 # Run jmeter and generate HTML report
-docker exec -ti jb bash -c '$JMETER_HOME/bin/jmeter -l $JMETER_HOME/bin/results.csv -e -o report -f -n -t $JMETER_HOME/bin/$TESTFILE'
+docker exec -i jb bash -c '$JMETER_HOME/bin/jmeter -l $JMETER_HOME/bin/results.csv -e -o report -f -n -t $JMETER_HOME/bin/$TESTFILE'
 
 # Copy report folder to host
 docker cp jb:report .
