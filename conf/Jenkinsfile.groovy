@@ -9,7 +9,7 @@ pipeline {
         }
         stage('run script') {
             steps {
-               sh "sudo ./load_test_run.sh TODO_backend_test.jmx" 
+               sh "./load_test_run.sh TODO_backend_test.jmx" 
             }
         }
         stage('Deploy') {
