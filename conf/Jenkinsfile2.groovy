@@ -1,8 +1,7 @@
 pipeline {
     agent {
         kubernetes {
-            label "my-test"
-            //label "team-ct-jenkins-slave-${UUID.randomUUID().toString()}"
+            label "team-ct-jenkins-slave"
             defaultContainer 'jmeter'
             yamlFile 'conf/k8s-pod.yaml'
         }
