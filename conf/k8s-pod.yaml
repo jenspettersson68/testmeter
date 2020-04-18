@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: some-name
+  labels:
+    some-label: some-label-value
+spec:
+  containers:
+
+  #jmeter
+  - name: jb
+    image: mesmeratu/jmeter
+    resources:
+      limits:
+        memory: "4Gi"
+        cpu: "1"
+      requests:
+        memory: "256Mi"
+        cpu: "0.125"
+    tty: true
+        ports:
+        - containerPort: 1099 
+        - containerPort: 50000
+      protocol: TCP
+
+  #todo
+  - name: todo
+    image: jemeter/todo:latest
+    resources:
+      limits:
+        memory: "4Gi"
+        cpu: "1"
+      requests:
+        memory: "256Mi"
+        cpu: "0.125"
+    tty: true
+    ports:
+    - containerPort: 6078
+      protocol: TCP
+
+  imagePullSecrets:
+  - name: team-ct-gcr-json-key
