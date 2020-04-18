@@ -17,7 +17,7 @@ spec:
       requests:
         memory: "256Mi"
         cpu: "0.125"
-    tty: true
+    tty: false
         ports:
         - containerPort:  50000 
       protocol: TCP
