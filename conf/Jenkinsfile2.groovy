@@ -1,7 +1,7 @@
 pipeline {
     agent {
         kubernetes {
-            label "team-ct-jenkins-slave"
+            label "master"
             defaultContainer 'jmeter'
             yamlFile 'conf/k8s-pod.yaml'
         }
