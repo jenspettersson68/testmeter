@@ -16,7 +16,7 @@ pipeline {
         }
         stage('run script') {
             steps {
-               sh "./load_test_run.sh TODO_backend_test.jmx" 
+               sh "./load_test_run2.sh TODO_backend_test.jmx" 
             }
         }
         stage('Publish report') {
