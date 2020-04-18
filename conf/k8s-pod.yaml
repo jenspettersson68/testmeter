@@ -19,8 +19,7 @@ spec:
         cpu: "0.125"
     tty: true
         ports:
-        - containerPort: 1099 
-        - containerPort: 50000
+        - containerPort:  50000 
       protocol: TCP
 
   #todo
@@ -37,6 +36,3 @@ spec:
     ports:
     - containerPort: 6078
       protocol: TCP
-
-  imagePullSecrets:
-  - name: team-ct-gcr-json-key
