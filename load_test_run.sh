@@ -24,4 +24,4 @@ docker exec -i jb bash -c '$JMETER_HOME/bin/jmeter -l $JMETER_HOME/bin/results.c
 # Copy report folder to host
 docker cp jb:report .
 # Xopy csv for jenkinstest
-docker cp jb:$JMETER_HOME/bin/results.csv .
+docker cp jb:/jmeter/apache-jmeter-5.2.1/bin/results.csv .
