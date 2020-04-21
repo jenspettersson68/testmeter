@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Publish report') {
             steps {
-            perfReport 'result.csv'
+            perfReport 'results.csv'
        // publish html
         //    publishHTML target: [
         //    allowMissing: false,
