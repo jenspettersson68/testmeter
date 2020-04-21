@@ -14,15 +14,16 @@ pipeline {
         }
         stage('Publish report') {
             steps {
+            perfReport 'result.csv'
        // publish html
-            publishHTML target: [
-            allowMissing: false,
-            alwaysLinkToLastBuild: false,
-            keepAll: true,
-            reportDir: 'report',
-            reportFiles: 'index.html',
-            reportName: 'Performance Test Report'
-          ]
+        //    publishHTML target: [
+        //    allowMissing: false,
+        //    alwaysLinkToLastBuild: false,
+        //    keepAll: true,
+       //     reportDir: 'report',
+        //    reportFiles: 'index.html',
+       //     reportName: 'Performance Test Report'
+        //  ]
             }
         }
     }
